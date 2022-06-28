@@ -1,0 +1,102 @@
+/* ---------- GRID 1 ----------- */
+.wrapper {
+    display: grid;
+    gap: 0.5rem;
+    /* definir 3 columnas, puede ser cualquier otro tipo de medida*/
+    grid-template-columns: 1fr 30% 70px;
+    /* definir 3 columnas del mismo tamaño */
+    grid-template-columns: repeat(3, 1fr);
+    /* definir filas con altura minima y alto adaptable al contenido */
+    grid-auto-rows: minmax(100px, auto);
+    /* defir columnas adaptables con con minimos y maximos de anchura */
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    /* funciona parecido */
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    padding: 0.5rem;
+    border: solid 1px red;
+}
+.wrapper div {
+    border: solid 1px blue;
+}
+
+/* -----------GRID 2---------- */
+.wrapper2 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 1em;
+    padding: 0.5rem;
+    border: solid 1px red;
+}
+.box {
+    border: solid 1px blue;
+    padding: 0.5rem;
+    height: 200px;
+}
+.box1 {
+    display: grid;
+    grid-row-gap: 1em;
+}
+.box1 div {
+    border: solid 1px green;
+}
+
+/* -----------------GRID Y FLEXBOX------------------- */
+
+/* -- EJEMPLO1 -- */
+.wrapper3 {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0.5rem;
+    border: solid 1px red;
+}
+.wrapper3 > div {
+    flex: 1 1 200px;
+    border: solid 1px blue;
+}
+/* -- grid -- */
+.wrapper4 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 0.5rem;
+    border: solid 1px red;
+}
+.wrapper4 > div {
+    flex: 1 1 200px;
+    border: solid 1px blue;
+}
+/* -- EJEMPLO2 -- */
+.wrapper5 {
+    display: flex;
+    align-items: flex-end;
+    min-height: 200px;
+    padding: 0.5rem;
+    border: solid 1px red;
+}
+.wrapper5 > div {
+    border: solid 1px blue;
+}
+.box51 {
+    align-self: stretch;
+}
+.box52 {
+    align-self: flex-start;
+}
+/* -- grid -- */
+.wrapper6 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: end;
+    grid-auto-rows: 200px;
+    padding: 0.5rem;
+    border: solid 1px red;
+}
+.wrapper6 > div {
+    border: solid 1px blue;
+}
+.box61 {
+    align-self: stretch;
+}
+.box62 {
+    align-self: flex-start;
+}

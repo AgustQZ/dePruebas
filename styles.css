@@ -1,0 +1,63 @@
+body {
+    background-color: gainsboro;
+}
+
+p {
+    color: purple;
+    margin: 0.5em 0;
+}
+
+:root * {
+    box-sizing: border-box;
+}
+/* -------------------------------------------------------------------------- */
+.screen {
+    background: #e25865 url(//cssanimation.rocks/screen/images/screen_bg.png)
+        no-repeat top center;
+    background-size: 100% auto;
+    border: 2em solid #fff;
+    border-radius: 1em;
+    width: 40em;
+    height: 30em;
+}
+
+@keyframes scroll {
+    0%,
+    10% {
+        background-position: 0 0em;
+    }
+    10%,
+    30% {
+        background-position: 0 -22em;
+    }
+    40%,
+    60% {
+        background-position: 0 -44em;
+    }
+    80%,
+    100% {
+        background-position: 0 0;
+    }
+}
+.screen {
+    animation: scroll 10s cubic-bezier(0.52, -0.39, 0.3, 1.43) infinite;
+}
+.screen:hover {
+    animation-play-state: paused;
+}
+.message {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-size: 3em;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    /* --- para animar --- */
+    opacity: 0;
+    transition: all 0.4s ease-out;
+}
+.message:hover {
+    opacity: 1;
+}
+/* -------------------------------------------------------------------------- */

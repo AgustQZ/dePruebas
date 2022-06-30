@@ -7,6 +7,9 @@ selector(div,h1,p,etc) o pseudo-elemento(::)    = 1
 * , +, >, ~, ' ' y :not no aportan especificidad
 
 !important invalida la cascada y solo se anula con otro o con mayor especificidad
+
+par     = even
+impar   = odd
 ------------------------------------------------------ */
 
 .container {
@@ -25,12 +28,30 @@ h2 + ul .litem {
     background-color: aquamarine;
 }
 
-/* media query fondo----------------------- */
+/* selector de atributo(en este caso es innecesario) */
+img[src] {
+    border: 1px solid red;
+    width: 150px;
+}
+img[src]:hover {
+    position: absolute;
+    margin: 0 auto;
+    top: 2rem;
+    left: 2rem;
+    width: 40%;
+}
+
+/* selector hermanos generales */
+h2 ~ p {
+    background-color: gold;
+}
+
+/* media query fondo me gusto el ejemplo----------------------- */
 body {
     background-color: pink;
 }
 @media (min-width: 30em) {
     body {
-        background-color: silver;
+        background-color: white;
     }
 }

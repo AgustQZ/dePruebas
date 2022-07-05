@@ -1,0 +1,30 @@
+:root {
+    --base-color: #CCFF99;
+    --contrast-color: #BF360C;
+    --box-shadow: 16px 20px 20px rgba(0, 0, 0, 0.2);
+    --box-shadow-inset-light: inset 5px 8px 8px rgba(255, 255, 255, 0.4);
+    --box-shadow-inset-dark: inset -5px -8px 8px rgba(0, 0, 0, 0.4);
+    --text-shadow-light: 1px 1px 4px white;
+}
+
+html {
+    font-family: sans-serif;
+}
+
+.cool {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 200px;
+    margin: 50vh auto;
+    font-size: 1.2rem;
+    font-weight: bolder;
+    background-color: var(--base-color);
+    color: var(--contrast-color);
+    text-shadow: var(--text-shadow-light);
+    border: 3px solid var(--contrast-color);
+    border-radius: 1rem;
+    background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
+    box-shadow: var(--box-shadow), var(--box-shadow-inset-light), var(--box-shadow-inset-dark);
+}

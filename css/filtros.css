@@ -1,0 +1,53 @@
+/*
+filter: url("filters.svg#filter-id");
+filter: blur(5px);
+filter: brightness(0.4);
+filter: contrast(200%);
+filter: drop-shadow(16px 16px 20px blue);
+filter: grayscale(50%);
+filter: hue-rotate(90deg);
+filter: invert(75%);
+filter: opacity(25%);
+filter: saturate(30%);
+filter: sepia(60%);
+*/
+html {
+    font-family: sans-serif;
+}
+
+img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+}
+
+.mask {
+    /* mascara de recorte para que no se salga el desenfoque */
+    clip-path: polygon(0% 0%, 100% 00%, 100% 100%, 0% 100%);
+}
+
+.transition {
+    /* transition: transition-property, transition-duration, transition-timing-function, transition-delay. */
+    transition: filter 0.5s cubic-bezier(.76, .43, 1, .8);
+}
+
+.blur:hover {
+    filter: blur(25px);
+}
+
+.invert:hover {
+    filter: invert(100%);
+}
+
+.gray-scale:hover {
+    filter: grayscale(100%);
+}
+
+.hue-rotate:hover {
+    filter: hue-rotate(250deg);
+}

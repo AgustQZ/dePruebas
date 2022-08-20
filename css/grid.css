@@ -20,10 +20,11 @@
     /* funciona parecido */
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     padding: 0.5rem;
-    border: solid 2px tomato;
+    border: solid 2px orange;
 }
+
 .wrapper div {
-    border: solid 1px blue;
+    border: solid 1px peru;
 }
 
 /* -----------GRID 2---------- */
@@ -32,66 +33,55 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
     padding: 0.5rem;
-    border: solid 2px tomato;
+    border: solid 2px orange;
 }
+
 .box {
-    border: solid 1px blue;
+    border: solid 1px peru;
     padding: 0.5rem;
     height: 200px;
 }
+
 .box1 {
     display: grid;
     gap: 1rem;
 }
+
 .box1 div {
-    border: solid 1px green;
+    border: solid 1px royalblue;
 }
 
 /* -----------------GRID Y FLEXBOX------------------- */
 
-/* -- EJEMPLO1 -- */
-.wrapper3 {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    padding: 0.5rem;
-    border: solid 2px tomato;
-}
-.wrapper3 > div {
-    flex: 1 1 200px;
-    border: solid 1px blue;
-}
-/* -- grid -- */
+/* -- ejemplo1 grid -- */
 .wrapper4 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
     padding: 0.5rem;
-    border: solid 2px tomato;
+    border: solid 2px orange;
 }
-.wrapper4 > div {
+
+.wrapper4>div {
     flex: 1 1 200px;
-    border: solid 1px blue;
+    border: solid 1px peru;
 }
-/* -- EJEMPLO2 -- */
-.wrapper5 {
+
+/* -- ejemplo1 flexbox -- */
+.wrapper3 {
     display: flex;
-    align-items: flex-end;
+    flex-wrap: wrap;
     gap: 1rem;
-    min-height: 200px;
     padding: 0.5rem;
-    border: solid 2px tomato;
+    border: solid 2px steelblue;
 }
-.wrapper5 > div {
-    border: solid 1px blue;
+
+.wrapper3>div {
+    flex: 1 1 200px;
+    border: solid 1px skyblue;
 }
-.box51 {
-    align-self: stretch;
-}
-.box52 {
-    align-self: flex-start;
-}
-/* -- grid -- */
+
+/* -- ejemplo2 grid -- */
 .wrapper6 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -99,41 +89,70 @@
     grid-auto-rows: 200px;
     gap: 1rem;
     padding: 0.5rem;
-    border: solid 2px tomato;
+    border: solid 2px orange;
 }
-.wrapper6 > div {
-    border: solid 1px blue;
+
+.wrapper6>div {
+    border: solid 1px peru;
 }
+
 .box61 {
     align-self: stretch;
 }
+
 .box62 {
     align-self: flex-start;
 }
 
-/* -- EJEMPLO3 -- */
+/* -- ejemplo2 flexbox -- */
+.wrapper5 {
+    display: flex;
+    align-items: flex-end;
+    gap: 1rem;
+    min-height: 200px;
+    padding: 0.5rem;
+    border: solid 2px steelblue;
+}
+
+.wrapper5>div {
+    border: solid 1px skyblue;
+}
+
+.box51 {
+    align-self: stretch;
+}
+
+.box52 {
+    align-self: flex-start;
+}
+
+/* -- ejemplo3 grid (fill, px)-- */
 .wrapper7 {
     display: grid;
     grid-template-columns: repeat(auto-fill, 200px);
     gap: 1rem;
     padding: 0.5rem;
-    border: solid 2px tomato;
+    border: solid 2px orange;
 }
-.wrapper7 > div {
-    border: solid 1px blue;
+
+.wrapper7>div {
+    border: solid 1px peru;
 }
-/* -- EJEMPLO4 -- */
+
+/* -- ejemplo4 grid (fill, minmax()) -- */
 .wrapper8 {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 1rem;
     padding: 0.5rem;
-    border: solid 2px tomato;
+    border: solid 2px orange;
 }
-.wrapper8 > div {
-    border: solid 1px blue;
+
+.wrapper8>div {
+    border: solid 1px peru;
 }
-/* -- EJEMPLO5 -- */
+
+/* -- ejemplo5 grid posicion relative y absolute -- */
 .wrapper9 {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -141,11 +160,13 @@
     gap: 1rem;
     position: relative;
     padding: 0.5rem;
-    border: solid 2px tomato;
+    border: solid 2px orange;
 }
-.wrapper9 > div {
-    border: solid 1px blue;
+
+.wrapper9>div {
+    border: solid 1px peru;
 }
+
 .box93 {
     grid-column: 2 / 4;
     grid-row: 1 / 3;
@@ -153,47 +174,55 @@
     top: 40px;
     left: 40px;
 }
-/* -- EJEMPLO6 -- */
+
+/* -- ejemplo6 grid posicion relative y absolute anidada -- */
 .wrapper10 {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-auto-rows: 200px;
     gap: 1rem;
     padding: 0.5rem;
-    border: solid 2px tomato;
+    border: solid 2px orange;
 }
+
 .wrapper10 div {
-    border: solid 1px blue;
+    border: solid 1px peru;
 }
+
 .box103 {
     position: relative;
     grid-column: 2 / 4;
     grid-row: 1 / 3;
 }
+
 .abspos {
     position: absolute;
     top: 40px;
     left: 40px;
     /* margin: 0.5rem; */
 }
-/* -- EJEMPLO7 -- */
+
+/* -- ejemplo7 grid con display: contents (no se para que se use pero es bueno tener la info) -- */
 .wrapper11 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-auto-rows: minmax(100px, auto);
     gap: 1rem;
     padding: 0.5rem;
-    border: solid 2px tomato;
+    border: solid 2px orange;
 }
-.wrapper11 > div {
-    border: solid 1px blue;
+
+.wrapper11>div {
+    border: solid 1px peru;
 }
+
 .box111 {
     grid-column: 1 / 4;
     padding: 0.5rem;
     /* contents desaparece el padre y lo reemplaza por los hijos */
     display: contents;
 }
+
 .nested {
-    border: solid 1px fuchsia;
+    border: solid 1px steelblue;
 }
